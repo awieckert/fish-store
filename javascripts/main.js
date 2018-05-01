@@ -1,7 +1,7 @@
 // Filter fish that are "on sale"
 
 const filterFish = () => {
-  $('#available .fish').not('.on-sale').toggle();
+  $('#available .fish').not('.on-sale').toggle(changeButtonText());
 };
 
 const changeButtonText = () => {
@@ -16,10 +16,7 @@ const changeButtonText = () => {
   });
 };
 
-$('#show-sale').click(()=> {
-  changeButtonText();
-  filterFish();
-});
+$('#show-sale').click(filterFish);
 
 // Add fish to "Basket"
 const moveToCart = (e) => {
