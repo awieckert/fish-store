@@ -16,8 +16,6 @@ const changeButtonText = () => {
   });
 };
 
-$('#show-sale').click(filterFish);
-
 // Add fish to "Basket"
 const moveToCart = (e) => {
   const fish = $(e.target).closest('.fish');
@@ -25,4 +23,9 @@ const moveToCart = (e) => {
   $('#snagged').append(fish);
 };
 
-$('button.add').click(moveToCart);
+const bindEvents = () => {
+  $('button.add').click(moveToCart);
+  $('#show-sale').click(filterFish);
+};
+
+module.exports = bindEvents;
