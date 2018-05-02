@@ -1,3 +1,5 @@
-const initializer = require('./events.js');
+// const initializer = require('./events.js');
+const startApplication = require('./data.js');
 
-initializer();
+// initializer();
+startApplication();
